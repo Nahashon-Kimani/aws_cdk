@@ -20,7 +20,7 @@ aws configure                   # set your AWS credentials
 Follow this link to install AWS https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 
 ### 2 – Set your email
-Open `cdk_demo_stack.py` and change line 14:
+Open `cdk_demo_stack.py` and change line 17:
 ```python
 NOTIFICATION_EMAIL = "your-email@example.com"   # ← change this
 ```
@@ -35,7 +35,9 @@ cdk bootstrap aws://ACCOUNT_ID/REGION
 cdk deploy
 ```
 Check your email — AWS will send a **subscription confirmation** you must click before notifications arrive.
-# if I get the error as --require approval what is the soolution?
+#### Q: If I get the error `--require-approval`, what is the solution?
+A: Add `--require-approval never` to your deploy command:
+
 
 
 ### 5 – Test
